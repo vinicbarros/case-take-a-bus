@@ -25,12 +25,20 @@ export default function Map() {
 
   return (
     <View style={styles.container}>
-      <MapView
-        style={styles.map}
-        provider={PROVIDER_GOOGLE}
-        customMapStyle={mapStyle}
-        showsUserLocation={true}
-      ></MapView>
+      {userLocation && (
+        <MapView
+          style={styles.map}
+          provider={PROVIDER_GOOGLE}
+          customMapStyle={mapStyle}
+          showsUserLocation={true}
+          initialRegion={{
+            latitude: userLocation.coords.latitude,
+            longitude: userLocation.coords.longitude,
+            latitudeDelta: 0.005,
+            longitudeDelta: 0.005,
+          }}
+        ></MapView>
+      )}
     </View>
   );
 }
