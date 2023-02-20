@@ -6,9 +6,12 @@ import {
   LocationObject,
   requestForegroundPermissionsAsync,
 } from "expo-location";
+import { BusStationData } from "../types/locationTypes";
+import MyButton from "../components/MyButton";
 
 export default function Map() {
   const [userLocation, setUserLocation] = useState<LocationObject | null>(null);
+  const [busStations, setBusStations] = useState<BusStationData[] | null>(null);
 
   async function requestLocationPermissions() {
     const { granted } = await requestForegroundPermissionsAsync();
@@ -26,18 +29,26 @@ export default function Map() {
   return (
     <View style={styles.container}>
       {userLocation && (
-        <MapView
-          style={styles.map}
-          provider={PROVIDER_GOOGLE}
-          customMapStyle={mapStyle}
-          showsUserLocation={true}
-          initialRegion={{
-            latitude: userLocation.coords.latitude,
-            longitude: userLocation.coords.longitude,
-            latitudeDelta: 0.005,
-            longitudeDelta: 0.005,
-          }}
-        ></MapView>
+        <>
+          <MapView
+            style={styles.map}
+            provider={PROVIDER_GOOGLE}
+            customMapStyle={mapStyle}
+            showsUserLocation={true}
+            initialRegion={{
+              latitude: userLocation.coords.latitude,
+              longitude: userLocation.coords.longitude,
+              latitudeDelta: 0.005,
+              longitudeDelta: 0.005,
+            }}
+          ></MapView>
+
+          <MyButton
+            latitude={userLocation.coords.latitude}
+            longitude={userLocation.coords.longitude}
+            setBusStations={setBusStations}
+          />
+        </>
       )}
     </View>
   );
