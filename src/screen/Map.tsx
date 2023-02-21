@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
-import { Button, Dimensions, StyleSheet, View } from "react-native";
+import { ActivityIndicator, Dimensions, StyleSheet, View } from "react-native";
 import {
   getCurrentPositionAsync,
   LocationObject,
@@ -28,7 +28,7 @@ export default function Map() {
 
   return (
     <View style={styles.container}>
-      {userLocation && (
+      {userLocation ? (
         <>
           <MapView
             style={styles.map}
@@ -50,7 +50,8 @@ export default function Map() {
                     latitude: station.geometry.location.lat,
                     longitude: station.geometry.location.lng,
                   }}
-                />
+                  icon={require("../assets/image/bus_marker.png")}
+                ></Marker>
               ))}
           </MapView>
           <MyButton
@@ -60,6 +61,13 @@ export default function Map() {
             setBusStations={setBusStations}
           />
         </>
+      ) : (
+        <ActivityIndicator
+          size="large"
+          animating={true}
+          color={"#f5ab35"}
+          style={{ alignSelf: "center", justifyContent: "center" }}
+        />
       )}
     </View>
   );
@@ -74,6 +82,24 @@ const mapStyle = [
       },
       {
         weight: 8,
+      },
+    ],
+  },
+  {
+    featureType: "poi.business",
+    elementType: "labels.text.fill",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "poi.business",
+    elementType: "labels.text.stroke",
+    stylers: [
+      {
+        visibility: "off",
       },
     ],
   },
