@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
-import { Button, StyleSheet, View } from "react-native";
+import { Button, Dimensions, StyleSheet, View } from "react-native";
 import {
   getCurrentPositionAsync,
   LocationObject,
@@ -41,11 +41,22 @@ export default function Map() {
               latitudeDelta: 0.005,
               longitudeDelta: 0.005,
             }}
-          ></MapView>
-
+          >
+            {busStations &&
+              busStations.map((station) => (
+                <Marker
+                  key={station.place_id}
+                  coordinate={{
+                    latitude: station.geometry.location.lat,
+                    longitude: station.geometry.location.lng,
+                  }}
+                />
+              ))}
+          </MapView>
           <MyButton
             latitude={userLocation.coords.latitude}
             longitude={userLocation.coords.longitude}
+            busStations={busStations}
             setBusStations={setBusStations}
           />
         </>
@@ -71,9 +82,12 @@ const mapStyle = [
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   map: {
-    width: "100%",
-    height: "100%",
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
   },
 });
