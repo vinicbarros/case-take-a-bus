@@ -1,7 +1,7 @@
 import { BusStationData } from "../types/locationTypes";
 import api from "./api";
 
-export async function requestNearbyBusStation({
+export default async function requestNearbyBusStation({
   latitude,
   longitude,
 }: {

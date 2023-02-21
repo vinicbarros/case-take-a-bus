@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useMutation } from "react-query";
-import { requestNearbyBusStation } from "../services/locationService";
+import requestNearbyBusStation from "../services/locationService";
 import { BusStationData } from "../types/locationTypes";
 
 export default function MyButton({
@@ -30,7 +30,10 @@ export default function MyButton({
   };
 
   return (
-    <TouchableOpacity onPress={showBusStations} style={styles.buttonContainer}>
+    <TouchableOpacity
+      onPress={showBusStations}
+      style={styles.buttonContainer}
+    >
       <Image
         source={require("../assets/image/logo_take_a_bus.png")}
         style={styles.imageLogo}
