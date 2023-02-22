@@ -38,7 +38,7 @@ dos pontos de ônibus próximos
   npm install
 ```
 
-Se você não quiser rodar a API localmente, pule para a etapa 7. (Recomendado)
+**Se você não quiser rodar a API localmente, pule para a etapa 7. (Recomendado)**
 
 4. (Opcional) Se você optar por rodar a API localmente, utilize seu endereço IPV4 como url, não se esqueça de colocar a porta que está rodando a API também. Ex: `123.456.11.2:4000`. Se você não sabe qual o seu endereço IPV4, primeiro rode a aplicação:
 
