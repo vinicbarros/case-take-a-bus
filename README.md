@@ -7,6 +7,12 @@ Esse projeto é parte de um processo seletivo da Take a Bus para a vaga de Full 
 O objetivo dessa case era criar uma aplicação em React Native contendo um mapa, sem nenhuma outra informação, apenas com um botão switch
 que controla a visualização de pontos de ônibus próximos a localização atual do usuário.
 
+<hr>
+<div align=center style="display:flex; justify-content: center;">
+    <img src="https://i.imgur.com/n4zwKOZ.gif">
+</div>
+<hr>
+
 ## Requisitos da case:
 - [x] Conter um mapa
 - [x] Um botão switch para controlar a visualização
