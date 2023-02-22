@@ -38,9 +38,9 @@ dos pontos de ônibus próximos
   npm install
 ```
 
-Se você não quiser rodar a API localmente, pule para a etapa 6. (Recomendado)
+Se você não quiser rodar a API localmente, pule para a etapa 7. (Recomendado)
 
-4. (Opcional) Se você optar por rodar a API localmente, utilize seu endereço IPV4 como url, não se esqueça de colocar a porta que está rodando a API também. Ex: `123.456.11.2:4000`. <a href="https://github.com/vinicbarros/case-take-a-bus-api">Como rodar a API Localmente.</a> Se você não sabe qual o seu endereço IPV4, primeiro rode a aplicação:
+4. (Opcional) Se você optar por rodar a API localmente, utilize seu endereço IPV4 como url, não se esqueça de colocar a porta que está rodando a API também. Ex: `123.456.11.2:4000`. Se você não sabe qual o seu endereço IPV4, primeiro rode a aplicação:
 
 ```bash
   npm run start
@@ -61,8 +61,9 @@ Se você não quiser rodar a API localmente, pule para a etapa 6. (Recomendado)
 
 › Press ? │ show all commands
 ```
+6. (Opcional) Siga as instruções de como rodar a API localmente por aqui: <a href="https://github.com/vinicbarros/case-take-a-bus-api">Como rodar a API Localmente.</a>
 
-6. Rode a aplicação
+7. Rode a aplicação
 
 ```bash
   npm run start
