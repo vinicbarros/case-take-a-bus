@@ -38,17 +38,31 @@ dos pontos de ônibus próximos
   npm install
 ```
 
-4. Crie um arquivo chamado `.env` na pasta raiz do projeto (onde fica o `package.json` e o `.env.example`)
+Se você não quiser rodar a API localmente, pule para a etapa 6.
 
-5. Popule o `.env` de acordo com o `.env.example` (OBS: Se você optar por rodar a API localmente, utilize seu endereço IPV4 como url, não se esqueça de colocar a porta que está rodando a API também. Ex: `123.456.11.2:4000`). <a href="https://github.com/vinicbarros/case-take-a-bus-api">Como rodar a API Localmente.</a>
-
-6. Se você optar por rodar o projeto usando o deploy da API, cole esta `BASE_URL` no seu `.env` 
+4. (Opcional) Se você optar por rodar a API localmente, utilize seu endereço IPV4 como url, não se esqueça de colocar a porta que está rodando a API também. Ex: `123.456.11.2:4000`. <a href="https://github.com/vinicbarros/case-take-a-bus-api">Como rodar a API Localmente.</a> Se você não sabe qual o seu endereço IPV4, primeiro rode a aplicação:
 
 ```bash
-  BASE_URL=https://case-take-a-bus-api-production.up.railway.app
+  npm run start
+``` 
+
+5. (Opcional) Espere terminar de rodar e procure no seu terminal a linha `Metro waiting on ....`, a url que aparecer é o seu endereço IPV4, cole seu IPV4 no `.env` e troque a porta que apareceu no terminal pela porta que sua API está rodando. Ficará algo como: `BASE_URL=http://XXX.XXX.XX.X:5000`.
+
+```bash
+› Metro waiting on exp://XXX.XXX.XX.X:19000
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+
+› Press a │ open Android
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+
+› Press ? │ show all commands
 ```
 
-7. Rode a aplicação
+6. Rode a aplicação
 
 ```bash
   npm run start
