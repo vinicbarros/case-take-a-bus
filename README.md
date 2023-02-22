@@ -9,14 +9,15 @@ que controla a visualização de pontos de ônibus próximos a localização atu
 
 <hr>
 <div align=center style="display:flex; justify-content: center;">
-    <img src="https://i.imgur.com/n4zwKOZ.gif">
+    <img src="./src/assets/video/showcase.gif" style="width: 300px">
 </div>
 <hr>
 
 ## Requisitos da case:
+
 - [x] Conter um mapa
 - [x] Um botão switch para controlar a visualização
-dos pontos de ônibus próximos
+      dos pontos de ônibus próximos
 - [x] Visualizar os pontos de ônibus mais próximos
 
 ## Funcionalidades da aplicação:
@@ -27,6 +28,7 @@ dos pontos de ônibus próximos
 - [x] Visualizar os pontos de ônibus mais próximos ao usuário
 
 ### Como rodar a aplicação
+
 <hr>
 
 1. Clone o projeto
@@ -53,7 +55,7 @@ dos pontos de ônibus próximos
 
 ```bash
   npm run start
-``` 
+```
 
 5. (Opcional) Espere terminar de rodar e procure no seu terminal a linha `Metro waiting on ....`, a url que aparecer é o seu endereço IPV4, cole seu IPV4 no `.env` e troque a porta que apareceu no terminal pela porta que sua API está rodando. Ficará algo como: `BASE_URL=http://XXX.XXX.XX.X:5000`.
 
@@ -70,6 +72,7 @@ dos pontos de ônibus próximos
 
 › Press ? │ show all commands
 ```
+
 6. (Opcional) Siga as instruções de como rodar a API localmente por aqui: <a href="https://github.com/vinicbarros/case-take-a-bus-api">Como rodar a API Localmente.</a>
 
 7. Rode a aplicação
@@ -80,7 +83,7 @@ dos pontos de ônibus próximos
 
 ## Ferramentas utilizadas:
 
-- [x] Expo 
+- [x] Expo
 - [x] Expo Location
 - [x] React Native
 - [x] TypeScript
