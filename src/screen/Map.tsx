@@ -75,31 +75,28 @@ export default function Map() {
 
 const mapStyle = [
   {
-    featureType: "transit.station",
+    featureType: "transit.station.bus",
     stylers: [
       {
         color: "#f5ab35",
       },
+    ],
+  },
+  {
+    featureType: "transit.station.rail",
+    elementType: "labels.icon",
+    stylers: [
       {
-        weight: 8,
+        color: "#00549c",
       },
     ],
   },
   {
-    featureType: "poi.business",
+    featureType: "transit.station.rail",
     elementType: "labels.text.fill",
     stylers: [
       {
-        visibility: "off",
-      },
-    ],
-  },
-  {
-    featureType: "poi.business",
-    elementType: "labels.text.stroke",
-    stylers: [
-      {
-        visibility: "off",
+        color: "#00549c",
       },
     ],
   },
