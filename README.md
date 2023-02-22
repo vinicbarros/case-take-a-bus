@@ -1,36 +1,63 @@
-# TypeScript Example
+# Case Take a Bus
+Esse projeto é parte de um processo seletivo da Take a Bus para a vaga de Full Stack Engineer.
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+O objetivo dessa case era criar uma aplicação em React Native contendo um mapa, sem nenhuma outra informação, apenas com um botão switch
+que controla a visualização de pontos de ônibus próximos a localização atual do usuário.
 
-```sh
-npx create-react-native-app -t with-typescript
+## Requisitos da case:
+- [x] Conter um mapa
+- [x] Um botão switch para controlar a visualização
+dos pontos de ônibus próximos
+- [x] Visualizar os pontos de ônibus mais próximos
+
+## Funcionalidades da aplicação:
+
+- [x] Tela de loading
+- [x] Mapa com um estilo customizado (Criei um estilo personalizado de mapa)
+- [x] Botão de switch que faz requisições para a API
+- [x] Visualizar os pontos de ônibus mais próximos ao usuário
+
+### Como rodar a aplicação
+<hr>
+
+1. Clone o projeto
+
+```bash
+  git clone https://github.com/vinicbarros/case-take-a-bus.git
 ```
 
-TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
+2. Vá para o diretório do projeto
 
-## 🚀 How to use
+```bash
+  cd case-take-a-bus
+```
 
-#### Creating a new project
+3. Instale as dependências
 
-- Install the CLI: `npm i -g expo-cli`
-- Create a project: `npx create-react-native-app -t with-typescript`
-- `cd` into the project
+```bash
+  npm install
+```
 
-### Adding TypeScript to existing projects
+4. Crie um arquivo chamado `.env` na pasta raiz do projeto (onde fica o `package.json` e o `.env.example`)
 
-- Create a blank TypeScript config: `touch tsconfig.json`
-- Run `yarn start` or `npm run start` to automatically configure TypeScript
-- Rename files to TypeScript, `.tsx` for React components and `.ts` for plain typescript files
+5. Popule o `.env` de acordo com o `.env.example` **(OBS: Se você optar por rodar a API localmente, utilize seu endereço IPV4 como url, e não se esqueça de colocar a porta rodando a API).**
 
-> 💡 You can disable the TypeScript setup in Expo CLI with the environment variable `EXPO_NO_TYPESCRIPT_SETUP=1 expo start`
+6. Se você optar por rodar o projeto usando o deploy da API, cole esta `BASE_URL` no seu `.env` 
 
-## 📝 Notes
+```bash
+  BASE_URL=https://case-take-a-bus-api-production.up.railway.app
+```
 
-- [Expo TypeScript guide](https://docs.expo.dev/versions/latest/guides/typescript/)
+7. Rode a aplicação
+
+```bash
+  npm run start
+```
+
+## Ferramentas utilizadas:
+
+- [x] Expo 
+- [x] Expo Location
+- [x] React Native
+- [x] TypeScript
+- [x] React Native Maps
