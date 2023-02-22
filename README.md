@@ -40,7 +40,7 @@ dos pontos de ônibus próximos
 
 4. Crie um arquivo chamado `.env` na pasta raiz do projeto (onde fica o `package.json` e o `.env.example`)
 
-5. Popule o `.env` de acordo com o `.env.example` **(OBS: Se você optar por rodar a API localmente, utilize seu endereço IPV4 como url, e não se esqueça de colocar a porta rodando a API).**
+5. Popule o `.env` de acordo com o `.env.example` (OBS: Se você optar por rodar a API localmente, utilize seu endereço IPV4 como url, não se esqueça de colocar a porta que está rodando a API também. Ex: `123.456.11.2:4000`). <a href="https://github.com/vinicbarros/case-take-a-bus-api">Como o projeto Localmente.</a>
 
 6. Se você optar por rodar o projeto usando o deploy da API, cole esta `BASE_URL` no seu `.env` 
 
