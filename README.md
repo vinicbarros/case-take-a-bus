@@ -4,7 +4,7 @@
 
 Esse projeto é parte de um processo seletivo da Take a Bus para a vaga de Full Stack Engineer.
 
-O objetivo desse case era criar uma aplicação em React Native contendo um mapa, sem nenhuma outra informação, apenas com um botão switch
+O objetivo do case era criar uma aplicação em React Native contendo um mapa, sem nenhuma outra informação, apenas com um botão switch
 que controla a visualização de pontos de ônibus próximos a localização atual do usuário.
 
 <hr>
