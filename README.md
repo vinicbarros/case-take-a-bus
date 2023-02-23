@@ -88,3 +88,5 @@ que controla a visualização de pontos de ônibus próximos a localização atu
 - [x] React Native
 - [x] TypeScript
 - [x] React Native Maps
+- [x] React Query
+- [x] Axios
