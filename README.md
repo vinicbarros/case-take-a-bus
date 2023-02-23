@@ -13,7 +13,7 @@ que controla a visualização de pontos de ônibus próximos a localização atu
 </div>
 <hr>
 
-## Requisitos da case:
+## Requisitos do case:
 
 - [x] Conter um mapa
 - [x] Um botão switch para controlar a visualização
